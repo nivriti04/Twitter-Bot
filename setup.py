@@ -61,7 +61,7 @@ class MyStream (tweepy.StreamingClient):
                 
 stream = MyStream(bearer_token=bearertoken)
 
-rule = tweepy.StreamRule("(#trump OR #programming) (-is:retweet -is:reply)")
+rule = tweepy.StreamRule("(#waterloo OR #loo) (-is:retweet -is:reply)")
 
 stream.add_rules(rule, dry_run="True")
 stream.filter()
@@ -89,5 +89,5 @@ class MyStream(tweepy.StreamingClient):
         time.sleep(0.2)   
 stream= MyStream(bearer_token=bearertoken)
 
-stream.add_rules(tweepy.StreamRule("#trump OR #programming"), dry_run=True)
+stream.add_rules(tweepy.StreamRule("#waterloo OR #loo"), dry_run=True)
 stream.filter()
